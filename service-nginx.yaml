@@ -2,13 +2,13 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: hyper-config-a
+  name: hyper-config-b
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-development
-  namespace: hyper-config-a
+  namespace: hyper-config-b
   labels:
     app: nginx
     environment: development
@@ -34,7 +34,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: nginx-service
-  namespace: hyper-config-a
+  namespace: hyper-config-b
 spec:
   selector:
     app: nginx
